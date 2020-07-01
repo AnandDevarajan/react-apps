@@ -3,15 +3,15 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Appsection from "./Appsection";
-import Card from "./Card";
+import Cardsection from "./Cardsection";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Hero />
+      <Cardsection />
       <Appsection />
-      <Card />
       <Footer />
     </div>
   );
