@@ -14,13 +14,13 @@ const Navbar = () => {
               Home{" "}
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">
+          <li className="nav-item">
+            <a className="nav-link text-white" href="#">
               About Us
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link text-white">Products</a>
+          <li className="nav-item dropdown">
+            <a className="nav-link text-white">Products</a>
           </li>
           <li className="nav-item">
             <a className="nav-link disabled" href="#">
