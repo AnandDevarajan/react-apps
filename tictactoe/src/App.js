@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Card, CardBody, Container, Button, Col, Row } from "reactstrap";
 import "./App.css";
 const itemArray = new Array(9).fill("empty");
+const newItem = [itemArray.length];
 const App = () => {
   const [isCross, setIsCross] = useState(false);
   const [winMessage, setWinMessage] = useState("");
@@ -111,7 +112,7 @@ const App = () => {
           )}
           <div className="grid">
             {itemArray.map((item, index) => (
-              <Card onClick={() => changeItem(index)} color="secondary">
+              <Card onClick={() => changeItem(index)}>
                 <CardBody className="box">
                   <Icon name={item} />
                 </CardBody>
