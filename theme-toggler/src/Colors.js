@@ -1,11 +1,11 @@
 const Theme = {
   light: {
-    textColor: "#0000",
     backgroundColor: "#fff",
     border: "2px solid #000",
+    color: "black",
   },
   dark: {
-    textColor: "#fff",
+    color: "#ffff",
     backgroundColor: "#333",
     border: "2px dashed #000",
   },
