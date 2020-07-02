@@ -10,9 +10,9 @@ const App = () => {
         <h1>Counter App</h1>
       </header>
       <h2>Counter Value = {count}</h2>
-      <button>Reset</button>
-      <button>Increment</button>
-      <button>Decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
     </div>
   );
 };
