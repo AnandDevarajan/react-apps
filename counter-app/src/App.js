@@ -12,7 +12,9 @@ const App = () => {
       <h2>Counter Value = {count}</h2>
       <button onClick={() => setCount(0)}>Reset</button>
       <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => (count === 0 ? "" : setCount(count - 1))}>
+        Decrement
+      </button>
     </div>
   );
 };
