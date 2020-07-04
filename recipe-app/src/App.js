@@ -3,16 +3,18 @@ import {} from "dotenv/config";
 import "./App.css";
 
 const App = () => {
-  const APP_ID = process.env.APP_ID;
-  const APP_KEY = process.env.APP_KEY;
+  const APP_ID = "660a9f90";
+  const APP_KEY = "e84a7b33cb7513e8d36d106d2a7c0758";
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getRecepies();
+  }, []);
 
   const getRecepies = async () => {
     const response = await fetch(
       `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
-    const data = response.json();
+    const data = await response.json();
     console.log(data);
   };
 
