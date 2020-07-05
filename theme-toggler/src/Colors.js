@@ -1,14 +1,12 @@
-const Theme = {
+const AppTheme = {
   light: {
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    color: "black",
+    textColor: "black",
+    backgroundColor: "#ffff",
   },
   dark: {
-    color: "#ffff",
+    textColor: "#ffff",
     backgroundColor: "#333",
-    border: "2px dashed #000",
   },
 };
 
-export default Theme;
+export default AppTheme;
