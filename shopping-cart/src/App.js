@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
+import { Container, Row, Col } from "reactstrap";
+import { ToastContainer, toast } from "react-toastify";
+import BuySection from "./Components/BuySection";
+import Cart from "./Components/Cart";
 import "./App.css";
-import { toast } from "react-toastify";
-
 function App() {
   const [cartItem, setCartItem] = useState([]);
 
@@ -13,7 +14,7 @@ function App() {
       return array.id === item.id;
     });
     if (isAdded !== -1) {
-      toast("Already added in cart", {
+      return toast("Already added in cart", {
         type: "error",
       });
     }
@@ -22,7 +23,7 @@ function App() {
 
   const buyNow = () => {
     setCartItem([]);
-    toast("Item Purchased", {
+    toast("Purchase Completed", {
       type: "success",
     });
   };
@@ -31,22 +32,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid>
+      <ToastContainer />
+      <Row>
+        <Col md="8">
+          <BuySection addItem={addItem} />
+        </Col>
+        <Col md="4">
+          <Cart cartItem={cartItem} removeItem={removeItem} buyNow={buyNow} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
