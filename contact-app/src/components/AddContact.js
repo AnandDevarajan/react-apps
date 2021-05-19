@@ -3,7 +3,7 @@ import { Form, Row, Col, Button, Container, Card } from "react-bootstrap";
 const AddContact = () => {
   return (
     <Container fluid className="mt-5">
-      <Card className="px-3 py-3 ml-auto mr-auto" style={{ width: "40rem" }}>
+      <Card className="px-3 py-3 ml-auto mr-auto" style={{ width: "35rem" }}>
         <Card.Header as="h1" className="text-center text-info">
           Add Contact
         </Card.Header>
