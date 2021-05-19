@@ -1,24 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import AddContact from "./components/AddContact";
 import ContactList from "./components/ContactList";
 import Footer from "./components/Footer";
 const App = () => {
-  const contacts = [
-    {
-      id: "1",
-      name: "Anand",
-      email: "anand@123.com",
-      phone: "29293929291",
-    },
-    {
-      id: "2",
-      name: "Anand2",
-      email: "anand2@123.com",
-      phone: "128322329291",
-    },
-  ];
+  const [contacts, setContacts] = useState([]);
 
   return (
     <div>
