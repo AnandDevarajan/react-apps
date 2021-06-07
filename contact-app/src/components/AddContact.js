@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Button, Container, Card } from "react-bootstrap";
-const AddContact = () => {
+const AddContact = ({ addContactHandler }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -10,7 +10,9 @@ const AddContact = () => {
       alert("Enter all the details");
       return;
     }
-    console.log(name, phone);
+    addContactHandler({ name, phone });
+    setName("");
+    setPhone("");
   };
 
   return (
